@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Layer 0: Default Layer
      * ,---------------------------------------------------------------.
-     * |Esc|  1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  -|  =|Backspc|Ins|
+     * |Esc|  1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  -|  =|Backspc|Grv|
      * |---------------------------------------------------------------|
      * |Tab  |  Q|  W|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]|     |Del|
      * |------------------------------------------------------Enter----|
@@ -29,7 +29,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |---------------------------------------------------------------|
      * |Shif|  \|  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /|Shift |Up |PgD|
      * |---------------------------------------------------------------|
-     * |Ctrl|Gui |Alt |         Space    |Fn0 |Alt |Gui |  |Lef|Dow|Rig|
+     * |Ctrl|Alt |Gui|         Space         |Gui |Alt |FN0|Lef|Dow|Rig|
      * `---------------------------------------------------------------'
      */
     [0] = KEYMAP_ISO(  
@@ -38,6 +38,20 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         FN0, A   ,S   ,D   ,F   ,G   ,H   ,J   ,K   ,L   ,SCLN ,QUOT,NUHS,  ENT,   PGUP,\
         LSFT,NUBS ,Z   ,X   ,C   ,V   ,B   ,N   ,M   ,COMM,DOT ,SLSH,RSFT,    UP, PGDN,\
         LCTL,LALT,LGUI,               SPC,          RGUI,RALT,FN0 ,    LEFT,DOWN,RGHT  ),
+    /* Layer 1: Other keys layer
+     * ,---------------------------------------------------------------.
+     * |Grv| F1| F2| F3| F4| F5| F6| F7| F8| F9| F0|   |   |  Del  |   |
+     * |---------------------------------------------------------------|
+     * |     |   |   |   |   |   |   |   |   |   |   |   |   |     |   |
+     * |------------------------------------------------------     ----|
+     * |      |   |   |   |   |   |   |   |   |   |   |   |   |    |   |
+     * |---------------------------------------------------------------|
+     * |    |   |   |   |   |   |   |   |   |   |   |   |      |PgU|   |
+     * |---------------------------------------------------------------|
+     * |    |    |    |                  |    |    |    |  |   |PgD|   |
+     * `---------------------------------------------------------------'
+     */
+
     [1] = KEYMAP_ISO(  
         GRV,	F1,	F2,	F3,	F4,	F5,	F6,	F7,	F8,	F9,	F10,	F11,	F12,	DEL,	TRNS,\
 		TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS, \
