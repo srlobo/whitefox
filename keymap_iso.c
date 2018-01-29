@@ -25,7 +25,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |---------------------------------------------------------------|
      * |Tab  |  Q|  W|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]|     |Del|
      * |------------------------------------------------------Enter----|
-     * |CapsLo|  A|  S|  D|  F|  G|  H|  J|  K|  L|  ;|  '|  #|    |PgU|
+     * |FN0   |  A|  S|  D|  F|  G|  H|  J|  K|  L|  ;|  '|  #|    |PgU|
      * |---------------------------------------------------------------|
      * |Shif|  \|  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /|Shift |Up |PgD|
      * |---------------------------------------------------------------|
@@ -33,36 +33,17 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `---------------------------------------------------------------'
      */
     [0] = KEYMAP_ISO(  
-        FN8 ,1   ,2   ,3   ,4   ,5   ,6   ,7   ,8   ,9   ,0   ,MINS,EQL ,BSPC,    FN11 ,\
-        TAB ,Q   ,W   ,E   ,R   ,T   ,Y   ,U   ,I   ,O   ,P   ,LBRC,RBRC,          FN4,\
-        CAPS,A   ,S   ,D   ,F   ,G   ,H   ,J   ,K   ,L   ,FN3 ,QUOT,NUHS,ENT ,    FN5,\
-        LSFT,FN2 ,Z   ,X   ,C   ,V   ,B   ,N   ,M   ,COMM,DOT ,SLSH,RSFT,     UP, PGDN,\
-        LCTL ,LGUI,LALT,               SPC,           RALT,RGUI,FN1 ,    LEFT,DOWN,RGHT  ),
+        ESC ,1   ,2   ,3   ,4   ,5   ,6   ,7   ,8   ,9   ,0   ,MINS,EQL ,BSPC,    GRV ,\
+        TAB ,Q   ,W   ,E   ,R   ,T   ,Y   ,U   ,I   ,O   ,P   ,LBRC,RBRC,         DEL,\
+        FN0, A   ,S   ,D   ,F   ,G   ,H   ,J   ,K   ,L   ,SCLN ,QUOT,NUHS,  ENT,   PGUP,\
+        LSFT,NUBS ,Z   ,X   ,C   ,V   ,B   ,N   ,M   ,COMM,DOT ,SLSH,RSFT,    UP, PGDN,\
+        LCTL,LALT,LGUI,               SPC,          RGUI,RALT,FN0 ,    LEFT,DOWN,RGHT  ),
     [1] = KEYMAP_ISO(  
-        FN8 ,F1  ,F2  ,F3  ,F4  ,F5  ,F6  ,F7  ,F8  ,F9  ,F10 ,F11 ,F12 ,BSPC,    CAPS,\
-        TAB ,DEL ,TRNS,UP  ,PSCR,BRK ,TRNS,PSCR,UP  ,TRNS,DEL ,TRNS,TRNS,          INS,\
-        LCTL,TRNS,LEFT,DOWN,RGHT,TRNS,TRNS,LEFT,DOWN,RGHT,FN3 ,INS ,SLCK,ENT ,    HOME,\
-        LSFT,FN2 ,HOME,PGUP,PGDN,END ,TRNS,TRNS,HOME,PGUP,PGDN,END ,RSFT,     UP,  END,\
-        FN1 ,LGUI,LALT,              BSPC,           RALT,RGUI,FN1 ,    LEFT,DOWN,RGHT  ),
-    [2] = KEYMAP_ISO(  
-        FN8 ,F1  ,F2  ,F3  ,F4  ,F5  ,F6  ,F7  ,F8  ,F9  ,F10 ,F11 ,F12 ,BSPC,    NLCK ,\
-        TAB ,DEL ,PMNS,PPLS,PAST,PSLS,TRNS,P7  ,P8  ,P9  ,PSLS,TRNS,TRNS,          DEL,\
-        LCTL,EQL ,DEL ,PENT,TAB ,FN6 ,TRNS,P4  ,P5  ,P6  ,FN3 ,TRNS,NLCK,TRNS,    PGUP,\
-        LSFT,FN2 ,TRNS,TRNS,TRNS,FN7 ,PDOT,P0  ,P1  ,P2  ,P3  ,PDOT,RSFT,     UP, PGDN,\
-        FN1 ,LGUI,LALT,              BSPC,           RALT,RGUI,FN1 ,    LEFT,DOWN,RGHT  ),
-    [3] = KEYMAP_ISO(  
-        FN8 ,F1  ,F2  ,F3  ,F4  ,F5  ,F6  ,F7  ,F8  ,F9  ,F10 ,F11 ,F12 ,BSPC,    GRV ,\
-        TAB ,TRNS,BTN4,WH_U,BTN5,TRNS,TRNS,TRNS,MS_U,TRNS,TRNS,TRNS,TRNS,          DEL,\
-        LCTL,TRNS,BTN2,BTN3,BTN1,TRNS,TRNS,MS_L,MS_D,MS_R,FN3 ,TRNS,TRNS,TRNS,    PGUP,\
-        LSFT,FN2 ,TRNS,TRNS,WH_D,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,RSFT,     UP, PGDN,\
-        FN1 ,LGUI,LALT,               SPC,           RALT,RGUI,FN1 ,    LEFT,DOWN,RGHT  ),
-    [4] = KEYMAP_ISO(  
-        FN8 , NO , NO , NO , NO , NO , NO , NO , NO , NO , NO ,VOLD,VOLU,PWR ,     NO ,\
-         NO , NO , NO , NO , NO , NO , NO , NO , NO , NO ,MPLY,MPRV,MNXT,          NO ,\
-         NO , NO , NO , NO , NO , NO , NO , NO , NO , NO , NO , NO , NO,  NO ,     NO ,\
-         NO , NO , NO , NO , NO , NO , NO , NO , NO , NO , NO , NO , NO ,     NO,  NO ,\
-         NO , NO , NO ,                NO,            NO , NO , NO ,     NO , NO , NO   ),
-
+        GRV,	F1,	F2,	F3,	F4,	F5,	F6,	F7,	F8,	F9,	F10,	F11,	F12,	DEL,	TRNS,\
+		TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS,	TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS ,TRNS ,TRNS,TRNS ,    TRNS,\
+        TRNS,TRNS ,TRNS,TRNS,TRNS,TRNS ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS ,TRNS,   PGUP,  TRNS,\
+        TRNS ,TRNS,TRNS,              TRNS,           TRNS,TRNS,TRNS ,    TRNS,PGDN,TRNS  ),
 };
 
 
@@ -78,15 +59,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 const action_t fn_actions[] = {
-    [3] = ACTION_LAYER_TAP_KEY(3, KC_SCLN),
-    [4] = ACTION_FUNCTION(ACTION_LEDS_ALL),
-    [5] = ACTION_FUNCTION(ACTION_LEDS_GAME),
-    [6] = ACTION_MODS_KEY(MOD_LSFT, KC_SCLN),
-    [7] = ACTION_MODS_KEY(MOD_LSFT, KC_TAB),
-    [8] = ACTION_LAYER_TAP_KEY(4, KC_ESC),
-    [9] = ACTION_MODS_ONESHOT(MOD_LSFT),
-    [10] = ACTION_MODS_ONESHOT(MOD_RSFT),
-    [11] = ACTION_FUNCTION(ACTION_TILDE_LED),
+	[0] = ACTION_LAYER_MOMENTARY(1),                  // FN0
 };
 /* custom action function */
 void action_function(keyrecord_t *record, uint8_t id, uint8_t opt) {
